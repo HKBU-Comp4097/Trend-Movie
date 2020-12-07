@@ -17,7 +17,7 @@ class MovieStore: MovieService {
     private let jsonDecoder = Utils.jsonDecoder
     
     //fetch movies func
-    func fetchMovies(from endPoint: MovieListEndPoint, completion: @escaping (Result<MovieResponse, MovieError>) -> ()){
+    func fetchMovies(from endPoint: MovieListEndpoint, completion: @escaping (Result<MovieResponse, MovieError>) -> ()){
         guard let url = URL(string: "\(baseAPIURL)/movie/\(endPoint.rawValue)") else {
             completion(.failure(.invalidEndpoint))
             return
