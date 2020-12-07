@@ -36,6 +36,7 @@
 		3AA516D3257DB2E0003009D1 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA516D2257DB2E0003009D1 /* ActivityIndicatorView.swift */; };
 		3AA516D6257DB390003009D1 /* MovieSearchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA516D5257DB390003009D1 /* MovieSearchState.swift */; };
 		3AA516D9257DB3EB003009D1 /* MovieListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA516D8257DB3EB003009D1 /* MovieListState.swift */; };
+		3AA516DC257DB809003009D1 /* MovieListViewComing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA516DB257DB809003009D1 /* MovieListViewComing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		3AA516D2257DB2E0003009D1 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		3AA516D5257DB390003009D1 /* MovieSearchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchState.swift; sourceTree = "<group>"; };
 		3AA516D8257DB3EB003009D1 /* MovieListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListState.swift; sourceTree = "<group>"; };
+		3AA516DB257DB809003009D1 /* MovieListViewComing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewComing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				3AA516C3257DB195003009D1 /* MoviePosterCard.swift */,
 				3AA516C6257DB1CA003009D1 /* MoviePosterCarouselView.swift */,
 				3AA516C9257DB206003009D1 /* MovieListView.swift */,
+				3AA516DB257DB809003009D1 /* MovieListViewComing.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				3AA516C0257CEE9A003009D1 /* SafariView.swift in Sources */,
 				3AA516A9257CE446003009D1 /* ImageLoader.swift in Sources */,
 				3AA516D3257DB2E0003009D1 /* ActivityIndicatorView.swift in Sources */,
+				3AA516DC257DB809003009D1 /* MovieListViewComing.swift in Sources */,
 				3AA516BC257CEDD4003009D1 /* LoadingView.swift in Sources */,
 				3AA516C4257DB195003009D1 /* MoviePosterCard.swift in Sources */,
 				3A8FFE6D257A864D0096F02F /* Movie.swift in Sources */,

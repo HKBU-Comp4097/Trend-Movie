@@ -15,10 +15,19 @@ struct ContentView: View {
                 .tabItem {
                     VStack {
                         Image(systemName: "tv")
-                        Text("Movies")
+                        Text("Today")
                     }
             }
             .tag(0)
+            
+            MovieListViewComing()
+                .tabItem {
+                    VStack{
+                        Image(systemName: "safari.fill")
+                        Text("Explore")
+                    }
+                }
+            
             
             MovieSearchView()
                 .tabItem {
