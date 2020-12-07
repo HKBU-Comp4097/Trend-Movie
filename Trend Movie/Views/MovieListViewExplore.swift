@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct MovieListViewComing: View {
+struct MovieListViewExplore: View {
     
     @ObservedObject private var upcomingState = MovieListState()
     @ObservedObject private var popularState = MovieListState()
@@ -35,7 +35,7 @@ struct MovieListViewComing: View {
                 .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 16, trailing: 0))
 
             }
-            .navigationBarTitle("Movie")
+            .navigationBarTitle("Explore more")
         }
         .onAppear {
             self.upcomingState.loadMovies(with: .upcoming)
@@ -45,7 +45,7 @@ struct MovieListViewComing: View {
     }
 }
 
-struct MovieListViewComing_Previews: PreviewProvider {
+struct MovieListViewExplore_Previews: PreviewProvider {
     static var previews: some View {
         MovieListView()
     }

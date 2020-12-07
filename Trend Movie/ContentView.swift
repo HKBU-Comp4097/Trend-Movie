@@ -9,35 +9,45 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage("status") var logged = false
     var body: some View {
-        TabView {
-            MovieListView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "tv")
-                        Text("Today")
+        NavigationView{
+            if logged{
+                TabView {
+                    MovieListView()
+                        .tabItem {
+                            VStack {
+                                Image(systemName: "tv")
+                                Text("Today")
+                            }
                     }
-            }
-            .tag(0)
-            
-            MovieListViewComing()
-                .tabItem {
-                    VStack{
-                        Image(systemName: "safari.fill")
-                        Text("Explore")
+                
+                    
+                    MovieListViewExplore()
+                        .tabItem {
+                            VStack{
+                                Image(systemName: "safari.fill")
+                                Text("Explore")
+                            }
+                        }
+                    
+                    
+                    MovieSearchView()
+                        .tabItem {
+                            VStack {
+                                Image(systemName: "magnifyingglass")
+                                Text("Search")
+                            }
                     }
+                    
+                    
                 }
-            
-            
-            MovieSearchView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "magnifyingglass")
-                        Text("Search")
-                    }
             }
-            .tag(1)
-            
+            else{
+                Login()
+                    .preferredColorScheme(.dark)
+                    .navigationBarHidden(true)
+            }
         }
     }
 }
