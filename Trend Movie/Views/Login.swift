@@ -104,25 +104,25 @@ struct Login : View {
                 
                 // Forget Button...
                 
-                Button(action: {}, label: {
-                    Text("Forget password?")
-                        .foregroundColor(Color("green"))
-                })
-                .padding(.top,8)
-                .alert(isPresented: $LoginModel.store_Info, content: {
-                    Alert(title: Text("Message"), message: Text("Store Information For Future Login Using BioMetric Authentication ???"), primaryButton: .default(Text("Accept"), action: {
-                        
-                        // storing Info For BioMetric...
-                        Stored_User = LoginModel.email
-                        Stored_Password = LoginModel.password
-                        
-                        withAnimation{self.logged = true}
-                        
-                    }), secondaryButton: .cancel({
-                        // redirecting to Home
-                        withAnimation{self.logged = true}
-                    }))
-                })
+//                Button(action: {}, label: {
+//                    Text("Forget password?")
+//                        .foregroundColor(Color("green"))
+//                })
+//                .padding(.top,8)
+//                .alert(isPresented: $LoginModel.store_Info, content: {
+//                    Alert(title: Text("Message"), message: Text("Store Information For Future Login Using BioMetric Authentication ???"), primaryButton: .default(Text("Accept"), action: {
+//
+//                        // storing Info For BioMetric...
+//                        Stored_User = LoginModel.email
+//                        Stored_Password = LoginModel.password
+//
+//                        withAnimation{self.logged = true}
+//
+//                    }), secondaryButton: .cancel({
+//                        // redirecting to Home
+//                        withAnimation{self.logged = true}
+//                    }))
+//                })
                 
                 // SignUp...
                 

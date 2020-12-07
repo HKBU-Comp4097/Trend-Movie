@@ -11,7 +11,6 @@ import SwiftUI
 struct ContentView: View {
     @AppStorage("status") var logged = false
     var body: some View {
-        NavigationView{
             if logged{
                 TabView {
                     MovieListView()
@@ -22,7 +21,6 @@ struct ContentView: View {
                             }
                     }
                 
-                    
                     MovieListViewExplore()
                         .tabItem {
                             VStack{
@@ -31,7 +29,6 @@ struct ContentView: View {
                             }
                         }
                     
-                    
                     MovieSearchView()
                         .tabItem {
                             VStack {
@@ -39,18 +36,17 @@ struct ContentView: View {
                                 Text("Search")
                             }
                     }
-                    
-                    
                 }
             }
             else{
-                Login()
-                    .preferredColorScheme(.dark)
-                    .navigationBarHidden(true)
+                NavigationView{
+                    Login()
+                        .preferredColorScheme(.dark)
+    //                    .navigationBarHidden(true)
+                    }
             }
         }
     }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

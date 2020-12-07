@@ -35,6 +35,7 @@ struct MovieListView: View {
                     
                 }
                 .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
+                
                 VStack(alignment: .center, spacing: 12){
                     
                     Text("User Logged In As \(Auth.auth().currentUser?.email ?? "")")
