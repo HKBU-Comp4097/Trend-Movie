@@ -52,12 +52,13 @@ struct MovieListView: View {
                             .foregroundColor(.black)
                             .padding(.vertical)
                             .frame(width: UIScreen.main.bounds.width - 150)
-                            .background(Color("green"))
+                            .background(Color("blue"))
                             .clipShape(Capsule())
                         
                     })
+                    .padding(.horizontal,50)
                 }
-                .padding(.horizontal,50)
+                .padding(.horizontal,30)
                 .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
             }
             .navigationBarTitle("Today's Hit")

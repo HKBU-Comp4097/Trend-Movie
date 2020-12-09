@@ -77,10 +77,10 @@ class LoginViewModel : ObservableObject{
             
             // Promoting User For Save data or not...
             
-            if self.Stored_User == "" || self.Stored_Password == ""{
-                self.store_Info.toggle()
-                return
-            }
+//            if self.Stored_User == "" || self.Stored_Password == ""{
+//                self.store_Info.toggle()
+//                return
+//            }
             
             // Else Goto Home...
             

@@ -12,7 +12,7 @@ struct Loading_Screen: View {
             
             Circle()
                 .trim(from: 0, to: 0.8)
-                .stroke(Color("green"),lineWidth: 10)
+                .stroke(Color("blue"),lineWidth: 10)
                 .frame(width: 60, height: 60)
                 .rotationEffect(.init(degrees: animate ? 360 : 0))
                 .padding(40)

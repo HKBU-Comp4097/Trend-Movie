@@ -5,8 +5,8 @@ struct Login : View {
     
     @StateObject var LoginModel = LoginViewModel()
     // when first time user logged in via email store this for future biometric login....
-    @AppStorage("stored_User") var Stored_User = ""
-    @AppStorage("stored_Password") var Stored_Password = ""
+    @State private var emailString = ""
+    @State private var password = ""
     
     @AppStorage("status") var logged = false
     
@@ -77,7 +77,7 @@ struct Login : View {
                             .foregroundColor(.black)
                             .padding(.vertical)
                             .frame(width: UIScreen.main.bounds.width - 150)
-                            .background(Color("green"))
+                            .background(Color("blue"))
                             .clipShape(Capsule())
                     })
                     .opacity(LoginModel.email != "" && LoginModel.password != "" ? 1 : 0.5)
@@ -95,53 +95,35 @@ struct Login : View {
                                 .font(.title)
                                 .foregroundColor(.black)
                                 .padding()
-                                .background(Color("green"))
+                                .background(Color("blue"))
                                 .clipShape(Circle())
                         })
                     }
                 }
                 .padding(.top)
                 
-                // Forget Button...
-                
-//                Button(action: {}, label: {
-//                    Text("Forget password?")
-//                        .foregroundColor(Color("green"))
-//                })
-//                .padding(.top,8)
-//                .alert(isPresented: $LoginModel.store_Info, content: {
-//                    Alert(title: Text("Message"), message: Text("Store Information For Future Login Using BioMetric Authentication ???"), primaryButton: .default(Text("Accept"), action: {
-//
-//                        // storing Info For BioMetric...
-//                        Stored_User = LoginModel.email
-//                        Stored_Password = LoginModel.password
-//
-//                        withAnimation{self.logged = true}
-//
-//                    }), secondaryButton: .cancel({
-//                        // redirecting to Home
-//                        withAnimation{self.logged = true}
-//                    }))
-//                })
+
                 
                 // SignUp...
                 
                 Spacer(minLength: 0)
                 
-                HStack(spacing: 5){
-                    
-                    Text("Don't have an account? ")
-                        .foregroundColor(Color.white.opacity(0.6))
-                    
-                    Button(action: {}, label: {
-                        Text("Signup")
-                            .fontWeight(.heavy)
-                            .foregroundColor(Color("green"))
-                    })
+                NavigationLink(destination: SignUp()){
+                    HStack(spacing: 5){
+                        
+                        Text("Don't have an account? ")
+                            .foregroundColor(Color.white.opacity(0.6))
+                        
+                        Button(action: {}, label: {
+                            Text("Signup")
+                                .fontWeight(.heavy)
+                                .foregroundColor(Color("blue"))
+                        })
+                    }
+                    .padding(.vertical)
+                    .animation(startAnimate ? .easeOut : .none)
                 }
-                .padding(.vertical)
             }
-            .animation(startAnimate ? .easeOut : .none)
             
             if LoginModel.isLoading{
                 
@@ -155,3 +137,4 @@ struct Login : View {
         })
     }
 }
+
